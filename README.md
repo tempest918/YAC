@@ -1,4 +1,4 @@
-# User Manual for YAC
+# Yet Another Caculator (YAC)
 
 ## Introduction
 YAC is a simple calculator application written in Python using the Tkinter library. It allows users to enter mathematical expressions and calculate their results. YAC also has a history window that keeps track of all of the expressions that have been entered and their results.
