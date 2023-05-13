@@ -3,6 +3,13 @@ from tkinter import messagebox
 
 class YAC(Frame):
     def __init__(self, master=None):
+        """
+        This class represents the YAC (Yet Another Calculator) application.
+        It inherits from the Frame class and provides a graphical user interface for a calculator.
+
+        Parameters:
+        - master: The root Tkinter window.
+        """
         super().__init__(master)
         self.master = master
         self.master.title("YAC")
@@ -11,6 +18,9 @@ class YAC(Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        """
+        Create the GUI widgets for the calculator.
+        """
         # Create input frame
         input_frame = Frame(self.master, bg='beige')
         input_frame.grid(row=0, column=0, padx=10, pady=10)
@@ -69,6 +79,12 @@ class YAC(Frame):
                 row += 1
 
     def button_pressed(self, text):
+        """
+        Handles the button press event.
+
+        Parameters:
+        - text: The text value of the pressed button.
+        """
         if text == '=':
             # Calculate result
             try:
@@ -89,15 +105,26 @@ class YAC(Frame):
             self.input_text.insert(END, text)
 
     def clear_equation(self):
+        """
+        Clears the current equation.
+        """
         self.equation = ''
         #self.history_text.delete('1.0', END)
         self.input_text.delete('1.0', END)
 
-            #fun stuff
     def on_click(self, event=None):
+        """
+        Handles the "Easter Egg" click event on the logo.
+
+        Parameters:
+        - event: The event object (optional).
+        """
         messagebox.showinfo('Secret','YAC 1.0 created by Anthony Barnes')
 
     def run(self):
+        """
+        Runs the YAC application.
+        """
         self.equation = ''
         self.master.mainloop()
 
